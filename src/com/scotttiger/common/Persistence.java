@@ -1,6 +1,6 @@
-package com.smartmarmot.common;
+package com.scotttiger.common;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 public interface Persistence {
 

@@ -15,10 +15,10 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.config.item.IConfigurationItem;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.config.item.IConfigurationItem;
 
 abstract class AbstractConfigurationElement implements IConfigurationElement {
 

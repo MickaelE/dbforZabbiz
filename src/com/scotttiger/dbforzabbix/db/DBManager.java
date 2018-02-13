@@ -15,24 +15,24 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.db;
+package com.scotttiger.dbforzabbix.db;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.config.Database;
-import com.smartmarmot.dbforbix.db.adapter.ALLBASE;
-import com.smartmarmot.dbforbix.db.adapter.DBAdapter;
-import com.smartmarmot.dbforbix.db.adapter.DB2;
-import com.smartmarmot.dbforbix.db.adapter.DB_NOT_DEFINED;
-import com.smartmarmot.dbforbix.db.adapter.MSSQL;
-import com.smartmarmot.dbforbix.db.adapter.MySQL;
-import com.smartmarmot.dbforbix.db.adapter.Oracle;
-import com.smartmarmot.dbforbix.db.adapter.PGSQL;
-import com.smartmarmot.dbforbix.db.adapter.SQLANY;
-import com.smartmarmot.dbforbix.db.adapter.SYBASE;
+import com.scotttiger.dbforzabbix.config.Database;
+import com.scotttiger.dbforzabbix.db.adapter.ALLBASE;
+import com.scotttiger.dbforzabbix.db.adapter.DBAdapter;
+import com.scotttiger.dbforzabbix.db.adapter.DB2;
+import com.scotttiger.dbforzabbix.db.adapter.DB_NOT_DEFINED;
+import com.scotttiger.dbforzabbix.db.adapter.MSSQL;
+import com.scotttiger.dbforzabbix.db.adapter.MySQL;
+import com.scotttiger.dbforzabbix.db.adapter.Oracle;
+import com.scotttiger.dbforzabbix.db.adapter.PGSQL;
+import com.scotttiger.dbforzabbix.db.adapter.SQLANY;
+import com.scotttiger.dbforzabbix.db.adapter.SYBASE;
 
 public class DBManager {
 

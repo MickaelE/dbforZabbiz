@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.db.adapter;
+package com.scotttiger.dbforzabbix.db.adapter;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -26,8 +26,8 @@ import org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS;
 import org.apache.commons.dbcp2.datasources.SharedPoolDataSource;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.config.Config;
-import com.smartmarmot.dbforbix.db.DBType;
+import com.scotttiger.dbforzabbix.config.Config;
+import com.scotttiger.dbforzabbix.db.DBType;
 
 abstract class AbstractDBAdapter implements DBAdapter {
 
@@ -59,7 +59,7 @@ abstract class AbstractDBAdapter implements DBAdapter {
 
 	private void createConnection() throws SQLException, ClassNotFoundException{
 			LOG.info("Creating new connection pool for database " + getName());
-			Config cfg=Config.getInstance();
+			Config cfg = Config.getInstance();
 			DriverAdapterCPDS cpds = new DriverAdapterCPDS();
 			cpds.setDriver(getType().getJDBCDriverClass());
 			cpds.setUrl(getURL());

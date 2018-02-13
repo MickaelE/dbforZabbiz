@@ -1,4 +1,4 @@
-package com.smartmarmot.common;
+package com.scotttiger.common;
 
 
 import java.io.File;
@@ -13,9 +13,9 @@ import java.io.ObjectOutputStream;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.config.Config;
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
-import com.smartmarmot.dbforbix.zabbix.ZabbixSender;
+import com.scotttiger.dbforzabbix.config.Config;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixSender;
 
 public class StackSingletonPersistent implements Persistence{
 

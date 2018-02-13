@@ -1,15 +1,15 @@
-package com.smartmarmot.dbforbix.config;
+package com.scotttiger.dbforzabbix.config;
+
+import com.scotttiger.dbforzabbix.config.Config.Validable;
+import com.scotttiger.dbforzabbix.db.DBType;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.config.Config.Validable;
-import com.smartmarmot.dbforbix.db.DBType;
-
 /**
  * Monitored database config entry
  */
-public class Database implements Validable {
+public class Database implements  Validable {
 	
 	DBType	type;
 	private String	nameFC;

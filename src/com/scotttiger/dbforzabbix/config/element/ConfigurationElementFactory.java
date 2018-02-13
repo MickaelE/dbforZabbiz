@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
 import java.security.InvalidParameterException;
 

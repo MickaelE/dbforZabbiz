@@ -1,4 +1,4 @@
-package com.smartmarmot.common;
+package com.scotttiger.common;
 
 import java.io.File;
 import java.sql.Connection;
@@ -12,8 +12,8 @@ import java.util.Collection;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.config.Config;
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.config.Config;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 
 //H2 File Database Example shows about storing the database contents into file system.
@@ -52,7 +52,7 @@ public class PersistentDB implements Persistence{
 		
 		}
 		String url = PersistentDB.DB_CONNECTION+DIRECTORY+"itemdb";
-		PersistentDB.DB_CONNECTION=url+";TRACE_LEVEL_FILE=1;TRACE_MAX_FILE_SIZE=5";
+        PersistentDB.DB_CONNECTION=url+";TRACE_LEVEL_FILE=1;TRACE_MAX_FILE_SIZE=5";
 		Connection conn;
 		try {
 			LOG.log(Level.INFO,"PersistentDB - initialization");
@@ -273,7 +273,7 @@ public class PersistentDB implements Persistence{
 
 	public static void main(String[] args) throws Exception {
 		try {
-			System.out.println("Size ="+PersistentDB.getInstance().size());
+			System.out.println("Size =" + PersistentDB.getInstance().size());
 //			ZabbixItem zi= new ZabbixItem ("host","key","value",0L);
 //			PersistentDB.getInstance().push(zi);
 //			zi= new ZabbixItem ("host1","key1","value1",1L);

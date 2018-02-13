@@ -15,13 +15,13 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix.protocol;
+package com.scotttiger.dbforzabbix.zabbix.protocol;
 
 import java.io.UnsupportedEncodingException;
 
 import org.apache.commons.codec.binary.Base64;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 /**
  * Zabbix 1.8 sender protocol, JSON based

@@ -1,19 +1,22 @@
-package com.smartmarmot.common.utils;
+package com.scotttiger.common.utils;
 
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+
+import java.nio.charset.StandardCharsets;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
-
 
 
 public class SAXParserDBforBIX {
@@ -28,12 +31,12 @@ public class SAXParserDBforBIX {
 	}};
 
 	/**
-	 * Parses input XML string trying to fix "<" or ">" signs. Iterates maximum 1000 times and then exits.
-	 * Throws XMLSyntaxUnrecoverableException
-	 * @param inputXMLString
-	 * @return
-	 * @throws XMLDBforBIXUnrecoverableException
-	 */
+     * Parses input XML string trying to fix "<" or ">" signs. Iterates maximum 1000 times and then exits.
+     * Throws XMLSyntaxUnrecoverableException
+     * @param inputXMLString
+     * @return
+     * @throws com.scotttiger.common.utils.XMLDBforBIXUnrecoverableException
+     */
 	public static String replaceSpecialChars(String inputXMLString)throws XMLDBforBIXUnrecoverableException{
 		String result=inputXMLString;
 		SAXParser parser = null;

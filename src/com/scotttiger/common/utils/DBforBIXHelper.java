@@ -1,8 +1,8 @@
-package com.smartmarmot.common.utils;
+package com.scotttiger.common.utils;
 
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
 
 public final class DBforBIXHelper {
 	

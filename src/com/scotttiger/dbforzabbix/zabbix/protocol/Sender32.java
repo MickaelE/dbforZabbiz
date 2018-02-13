@@ -15,9 +15,9 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix.protocol;
+package com.scotttiger.dbforzabbix.zabbix.protocol;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 /**
  * Zabbix 3.2 Proxy sender protocol, JSON based

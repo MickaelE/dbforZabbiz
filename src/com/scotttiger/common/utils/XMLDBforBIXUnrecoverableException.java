@@ -1,4 +1,5 @@
-package com.smartmarmot.common.utils;
+package com.scotttiger.common.utils;
+
 
 public class XMLDBforBIXUnrecoverableException extends RuntimeException {	
 	/**

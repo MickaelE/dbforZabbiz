@@ -15,11 +15,11 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.db.adapter;
+package com.scotttiger.dbforzabbix.db.adapter;
 
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.db.DBType;
+import com.scotttiger.dbforzabbix.db.DBType;
 
 public class MSSQL extends AbstractDBAdapter {
 	public MSSQL(String name, String url, String user, String passwd, Integer maxactive, Integer maxidle, Integer maxwaitmillis, Integer queryTimeout, Set<String> set, Boolean pers) {

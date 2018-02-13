@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config;
+package com.scotttiger.dbforzabbix.config;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -50,16 +50,16 @@ import org.apache.log4j.Logger;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
-import com.smartmarmot.dbforbix.config.item.ConfigurationItem;
-import com.smartmarmot.dbforbix.config.item.ConfigurationItemParserFactory;
-import com.smartmarmot.dbforbix.config.item.IConfigurationItem;
-import com.smartmarmot.dbforbix.config.item.IConfigurationItemParser;
-import com.smartmarmot.dbforbix.db.DBManager;
-import com.smartmarmot.dbforbix.db.DBType;
-import com.smartmarmot.dbforbix.db.adapter.DBAdapter;
-import com.smartmarmot.dbforbix.scheduler.Scheduler;
-import com.smartmarmot.common.utils.DBforBIXHelper;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
+import com.scotttiger.dbforzabbix.config.item.ConfigurationItem;
+import com.scotttiger.dbforzabbix.config.item.ConfigurationItemParserFactory;
+import com.scotttiger.dbforzabbix.config.item.IConfigurationItem;
+import com.scotttiger.dbforzabbix.config.item.IConfigurationItemParser;
+import com.scotttiger.dbforzabbix.db.DBManager;
+import com.scotttiger.dbforzabbix.db.DBType;
+import com.scotttiger.dbforzabbix.db.adapter.DBAdapter;
+import com.scotttiger.dbforzabbix.scheduler.Scheduler;
+import com.scotttiger.common.utils.DBforBIXHelper;
 
 public class Config {
 
@@ -622,7 +622,7 @@ public class Config {
 		/**
 		 * Update DBManager
 		 */
-		DBManager.getInstance().clean(configurationUIDs);
+        DBManager.getInstance().clean(configurationUIDs);
 		
 		/**
 		 * find databases without any configurationUID and remove them from collection
@@ -986,7 +986,9 @@ public class Config {
 						*/
 						String param=items.get("params").get(it);//Hint for items structure: Map->List[it]
 						//Note! Hash together: configuration item XML as is and the result of macros substitution in XML
-						String hashParam = Config.calculateMD5Sum(param)+Config.calculateMD5Sum(DBforBIXHelper.substituteMacros(param,zabbixServer,hostid));
+						String hashParam =
+                            Config.calculateMD5Sum(param) +
+                            Config.calculateMD5Sum(DBforBIXHelper.substituteMacros(param,zabbixServer,hostid));
 						//prefix is not necessary part of configuration item, and will be added some later
 						IConfigurationItem configurationItem = new ConfigurationItem(
 								configurationUID,
@@ -1009,7 +1011,7 @@ public class Config {
 							dbFC.url="---propagate error---";
 							dbFC.user="---propagate error---";
 							dbFC.password="---propagate error---";
-							dbFC.type=DBType.DB_NOT_DEFINED;
+							dbFC.type = DBType.DB_NOT_DEFINED;
 							databases.add(dbFC);
 						}
 						dbFC.addConfigurationUID(configurationUID);						
@@ -1081,8 +1083,9 @@ public class Config {
 				LOG.debug("Building configuration elements for "+configurationUID);
 				try {
 					String config=configurationItem.getParam();
-					config=DBforBIXHelper.substituteMacros(config,zabbixServer,configurationItem.getHostid());
-					IConfigurationItemParser configurationItemParser = ConfigurationItemParserFactory.getConfigurationItemParser(config);
+					config = DBforBIXHelper.substituteMacros(config,zabbixServer,configurationItem.getHostid());
+					IConfigurationItemParser configurationItemParser =
+                        ConfigurationItemParserFactory.getConfigurationItemParser(config);
 					Set<IConfigurationElement> configurationElements = configurationItemParser.buildConfigurationElements();					
 					configurationItem.addConfigurationElements(configurationElements);
 					buildSchedulers(configurationElements);
@@ -1204,7 +1207,7 @@ public class Config {
 	}
 
 	public static void setWorkTimers(Map<String,Timer> workTimers) {
-		Config.workTimers = workTimers;
+        Config.workTimers = workTimers;
 	}
 
 	public int getUpdateConfigTimeout() {

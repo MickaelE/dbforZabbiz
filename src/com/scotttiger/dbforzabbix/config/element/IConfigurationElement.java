@@ -15,14 +15,14 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.config.item.IConfigurationItem;
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.config.item.IConfigurationItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 /**
  * Configuration element is part of configuration item.

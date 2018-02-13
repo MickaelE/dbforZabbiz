@@ -15,13 +15,13 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.db.adapter;
+package com.scotttiger.dbforzabbix.db.adapter;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.db.DBType;
+import com.scotttiger.dbforzabbix.db.DBType;
 
 public interface DBAdapter {
 

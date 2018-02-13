@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,7 +24,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 public class DiscoveryConfigurationElement extends AbstractConfigurationElement {
 	
@@ -110,7 +110,7 @@ public class DiscoveryConfigurationElement extends AbstractConfigurationElement 
 		}
 
 		builder.append("]}");
-		return new ZabbixItem[] { new ZabbixItem(discoveryItemKey, builder.toString(),ZabbixItem.ZBX_STATE_NORMAL,clock, this) };
+		return new ZabbixItem[] { new ZabbixItem(discoveryItemKey, builder.toString(), ZabbixItem.ZBX_STATE_NORMAL,clock, this) };
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.config.item;
+package com.scotttiger.dbforzabbix.config.item;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,9 +16,9 @@ public class ConfigurationItemParserFactory {
 		Pattern p = Pattern.compile("^\\s*<\\s*parms\\s+.*");
 		Matcher m = p.matcher(config);
 		if (m.find()){
-			zabbixConfigurationType=ConfigurationItemType.XML;
+			zabbixConfigurationType = ConfigurationItemType.XML;
 		}else{
-			zabbixConfigurationType=ConfigurationItemType.Native;
+			zabbixConfigurationType = ConfigurationItemType.Native;
 		}
 		switch(zabbixConfigurationType){
 		case XML:

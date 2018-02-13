@@ -1,0 +1,35 @@
+{"itemid":"129436","type":"2","snmp_community":"","snmp_oid":"","hostid":"10273","name":"query[startup,version,ela]","key_":"zbxora[query,startup,version,ela]","delay":"0","history":"7","trends":"365","status":"0","value_type":"0","trapper_hosts":"","units":"s","multiplier":"0","delta":"0","snmpv3_securityname":"","snmpv3_securitylevel":"0","snmpv3_authpassphrase":"","snmpv3_privpassphrase":"","formula":"1","error":"","lastlogsize":"0","logtimefmt":"","templateid":"0","valuemapid":"0","delay_flex":"","params":"","ipmi_sensor":"","data_type":"0","authtype":"0","username":"","password":"","publickey":"","privatekey":"","mtime":"0","flags":"4","interfaceid":"0","port":"","description":"part of self health check; how long takes processing of a check section?","inventory_link":"0","lifetime":"30","snmpv3_authprotocol":"0","snmpv3_privprotocol":"0","state":"0","snmpv3_contextname":"","evaltype":"0","lastclock":"0","lastns":"0","lastvalue":"0","prevvalue":"0"}
+{"itemid":"129487","type":"2","snmp_community":"","snmp_oid":"","hostid":"10273","name":"query[startup,version,fetch] time","key_":"zbxora[query,startup,version,fetch]","delay":"0","history":"7","trends":"30","status":"0","value_type":"0","trapper_hosts":"","units":"s","multiplier":"0","delta":"0","snmpv3_securityname":"","snmpv3_securitylevel":"0","snmpv3_authpassphrase":"","snmpv3_privpassphrase":"","formula":"1","error":"","lastlogsize":"0","logtimefmt":"","templateid":"0","valuemapid":"0","delay_flex":"","params":"","ipmi_sensor":"","data_type":"0","authtype":"0","username":"","password":"","publickey":"","privatekey":"","mtime":"0","flags":"4","interfaceid":"0","port":"","description":"","inventory_link":"0","lifetime":"30","snmpv3_authprotocol":"0","snmpv3_privprotocol":"0","state":"0","snmpv3_contextname":"","evaltype":"0","lastclock":"0","lastns":"0","lastvalue":"0","prevvalue":"0"}
+{"itemid":"129538","type":"2","snmp_community":"","snmp_oid":"","hostid":"10273","name":"query[startup,version,status]","key_":"zbxora[query,startup,version,status]","delay":"0","history":"3","trends":"0","status":"0","value_type":"1","trapper_hosts":"","units":"","multiplier":"0","delta":"0","snmpv3_securityname":"","snmpv3_securitylevel":"0","snmpv3_authpassphrase":"","snmpv3_privpassphrase":"","formula":"1","error":"","lastlogsize":"0","logtimefmt":"","templateid":"0","valuemapid":"17","delay_flex":"","params":"","ipmi_sensor":"","data_type":"0","authtype":"0","username":"","password":"","publickey":"","privatekey":"","mtime":"0","flags":"4","interfaceid":"0","port":"","description":"status of query execution, part of self health check\r\n0 == OK, all others ERROR_CODE from database","inventory_link":"0","lifetime":"30","snmpv3_authprotocol":"0","snmpv3_privprotocol":"0","state":"0","snmpv3_contextname":"","evaltype":"0","lastclock":"0","lastns":"0","lastvalue":"0","prevvalue":"0"}
+{"itemid":"129316",
+"type":"2",
+"snmp_community":"",
+"snmp_oid":"","hostid":"10273",
+"name":"zbxora[version]","key_":"zbxora[version]",
+"delay":"0","history":"180","trends":"365","status":"0","value_type":"0","trapper_hosts":"","units":"","multiplier":"0","delta":"0","snmpv3_securityname":"","snmpv3_securitylevel":"0",
+"snmpv3_authpassphrase":"","snmpv3_privpassphrase":"","formula":"1","error":"","lastlogsize":"0",
+"logtimefmt":"","templateid":"41011","valuemapid":"0","delay_flex":"","params":"","ipmi_sensor":"","data_type":"0","authtype":"0","username":"","password":"","publickey":"","privatekey":"",
+"mtime":"0","flags":"0","interfaceid":"0","port":"","description":"","inventory_link":"18","lifetime":"30","snmpv3_authprotocol":"0","snmpv3_privprotocol":"0","state":"0",
+"snmpv3_contextname":"","evaltype":"0","lastclock":"0","lastns":"0","lastvalue":"0","prevvalue":"0"}
+Directory zbxora_checks
+
+{"itemid":"39986",
+"type":"0",
+"snmp_community":"",
+"snmp_oid":"",
+"hostid":"10273",
+"name":"Host name of zabbix_agentd running",
+"key_":"agent.hostname",
+"delay":"3600",
+"history":"7",
+"trends":"0",
+"status":"0",
+"value_type":"1",
+"trapper_hosts":"","units":"","multiplier":"0","delta":"0","snmpv3_securityname":"","snmpv3_securitylevel":"0","snmpv3_authpassphrase":"","snmpv3_privpassphrase":"","formula":"1","error":"","lastlogsize":"0","logtimefmt":"","templateid":"23326","valuemapid":"0","delay_flex":"","params":"","ipmi_sensor":"","data_type":"0","authtype":"0","username":"","password":"","publickey":"","privatekey":"","mtime":"0","flags":"0","interfaceid":"130","port":"","description":"","inventory_link":"0","lifetime":"30","snmpv3_authprotocol":"0","snmpv3_privprotocol":"0","state":"0","snmpv3_contextname":"","evaltype":"0","lastclock":"1518426386","lastns":"678303750","lastvalue":"st-ddc-vd-1","prevvalue":"st-ddc-vd-1"}
+
+
+
+
+docker run -d --name dockbix-db -v /backups:/backups -v /etc/localtime:/etc/localtime:ro --volumes-from dockbix-db-storage --env="MARIADB_USER=zabbix" --env="MARIADB_PASS=my_password" monitoringartist/zabbix-db-mariadb
+
+docker run -d --name dockbix   -p 80:80  -p 10051:10051  -v /etc/localtime:/etc/localtime:ro  --link dockbix-db:dockbix.db  --env="ZS_DBHost=dockbix.db"  --env="ZS_DBUser=zabbix"  --env="ZS_DBPassword=my_password" --env="XXL_zapix=true"  --env="XXL_grapher=true" monitoringartist/dockbix-xxl:latest

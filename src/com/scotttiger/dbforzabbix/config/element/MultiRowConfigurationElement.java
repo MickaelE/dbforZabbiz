@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 public class MultiRowConfigurationElement extends AbstractMultiConfigurationElement {
 	
@@ -55,7 +55,7 @@ public class MultiRowConfigurationElement extends AbstractMultiConfigurationElem
 					String fetchedVal = rs.getString(2);
 					if (fetchedVal != null && values.containsKey(fetchedName)) {
 						clock = new Long(System.currentTimeMillis() / 1000L);
-						values.put(fetchedName, new ZabbixItem(getPrefix()+fetchedName, fetchedVal,ZabbixItem.ZBX_STATE_NORMAL,clock,this));
+						values.put(fetchedName, new ZabbixItem(getPrefix()+fetchedName, fetchedVal, ZabbixItem.ZBX_STATE_NORMAL,clock,this));
 						
 					}
 				}

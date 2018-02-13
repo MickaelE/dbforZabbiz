@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.zabbix.protocol.json;
+package com.scotttiger.dbforzabbix.zabbix.protocol.json;
 
 
 import java.io.Serializable;

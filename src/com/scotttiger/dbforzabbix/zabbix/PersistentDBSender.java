@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix;
+package com.scotttiger.dbforzabbix.zabbix;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -25,10 +25,10 @@ import java.net.Socket;
 
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.common.PersistentDB;
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.zabbix.protocol.Sender18;
-import com.smartmarmot.dbforbix.zabbix.protocol.ISenderProtocol;
+import com.scotttiger.common.PersistentDB;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.zabbix.protocol.Sender18;
+import com.scotttiger.dbforzabbix.zabbix.protocol.ISenderProtocol;
 
 /**
  * Sender query handler
@@ -73,7 +73,7 @@ public class PersistentDBSender extends Thread {
 
 					LOG.info("PersistentDBSender - retrieving the first element to send");
 					while (PersistentDB.getInstance().size() != 0L ){
-						LOG.info("PersistentDBSender - found "+PersistentDB.getInstance().size()+" persistent items to send");
+						LOG.info("PersistentDBSender - found " + PersistentDB.getInstance().size()+" persistent items to send");
 						ZabbixItem zx = (ZabbixItem) PersistentDB.getInstance().pop();
 						for (ZabbixServer serverConfig : servers) {
 							try {
@@ -103,9 +103,10 @@ public class PersistentDBSender extends Thread {
 							}			 
 							catch (Exception ex) {
 								LOG.error("PersistentDBSender - Error contacting Zabbix server " + configuredServers[0].getZServerHost() +" port "+ configuredServers[0].getZServerPort()+ " - " + ex.getMessage());
-								LOG.debug("PersistentDBSender - Current PersistentDB size ="+PersistentDB.getInstance().size());
+								LOG.debug("PersistentDBSender - Current PersistentDB size =" +
+                                          PersistentDB.getInstance().size());
 								LOG.info("PersistentDBSender - Adding the item Adding the item="+zx.getHost()+" key="+zx.getKey()+" value="+zx.getValue()+" clock="+zx.getClock()+ " back to the persisent stack");
-								PersistentDB.getInstance().push(zx);
+                                PersistentDB.getInstance().push(zx);
 								LOG.info("PersistentDBSender - going to sleep for 1 minute");
 								Thread.sleep(60000);	
 							}

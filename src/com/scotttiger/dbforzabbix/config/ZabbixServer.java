@@ -1,4 +1,9 @@
-package com.smartmarmot.dbforbix.config;
+package com.scotttiger.dbforzabbix.config;
+
+import com.scotttiger.dbforzabbix.config.Config.Validable;
+import com.scotttiger.dbforzabbix.config.item.IConfigurationItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixSender;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixSender.PROTOCOL;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -6,10 +11,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import com.smartmarmot.dbforbix.config.Config.Validable;
-import com.smartmarmot.dbforbix.config.item.IConfigurationItem;
-import com.smartmarmot.dbforbix.zabbix.ZabbixSender.PROTOCOL;
 
 /**
  * Zabbix server config entry
@@ -20,7 +21,7 @@ public class ZabbixServer implements Validable {
 	int			zbxServerPort		= 10051;
 	private String 		zbxServerNameFC		= null;
 	String		proxy		= null;
-	private PROTOCOL	protocol	= PROTOCOL.V32;		
+	private PROTOCOL	protocol = ZabbixSender.PROTOCOL.V32;		
 	private Collection<String> definedDBNames  = null;
 	
 	

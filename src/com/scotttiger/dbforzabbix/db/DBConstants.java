@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.db;
+package com.scotttiger.dbforzabbix.db;
 
 public class DBConstants {
 	public static final String ORACLE= "ORACLE";

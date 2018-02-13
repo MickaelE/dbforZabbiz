@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix;
+package com.scotttiger.dbforzabbix.zabbix;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -25,10 +25,10 @@ import java.net.Socket;
 
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.common.StackSingletonPersistent;
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.zabbix.protocol.Sender18;
-import com.smartmarmot.dbforbix.zabbix.protocol.ISenderProtocol;
+import com.scotttiger.common.StackSingletonPersistent;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.zabbix.protocol.Sender18;
+import com.scotttiger.dbforzabbix.zabbix.protocol.ISenderProtocol;
 
 /**
  * Sender query handler
@@ -73,7 +73,7 @@ public class PersistentStackSender extends Thread {
 
 					LOG.info("PersitenceStackSender - retrieving the first element to send");
 					while (StackSingletonPersistent.getInstance().size() != 0 ){
-						LOG.debug("PersistentStackSender - found "+StackSingletonPersistent.getInstance().size()+" persistent items to send");
+						LOG.debug("PersistentStackSender - found " + StackSingletonPersistent.getInstance().size()+" persistent items to send");
 						ZabbixItem zx = (ZabbixItem) StackSingletonPersistent.getInstance().pop();
 						for (ZabbixServer serverConfig : servers) {
 							try {
@@ -103,9 +103,10 @@ public class PersistentStackSender extends Thread {
 							}			 
 							catch (Exception ex) {
 								LOG.error("PersistentStackSender - Error contacting Zabbix server " + configuredServers[0].getZServerHost() +" port "+ configuredServers[0].getZServerPort()+ " - " + ex.getMessage());
-								LOG.debug("PersistentStackSender - Current PeristentStack size ="+StackSingletonPersistent.getInstance().size());
+								LOG.debug("PersistentStackSender - Current PeristentStack size =" +
+                                          StackSingletonPersistent.getInstance().size());
 								LOG.info("PersistentStackSender - Adding the item Adding the item="+zx.getHost()+" key="+zx.getKey()+" value="+zx.getValue()+" clock="+zx.getClock()+ " back to the persisent stack");
-								StackSingletonPersistent.getInstance().push(zx);
+                                StackSingletonPersistent.getInstance().push(zx);
 								LOG.info("PersistentStackSender - going to sleep for 1 minute");
 								Thread.sleep(60000);	
 							}

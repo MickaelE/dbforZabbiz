@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.config.item;
+package com.scotttiger.dbforzabbix.config.item;
 
 public enum ConfigurationItemType {
  XML, Native;

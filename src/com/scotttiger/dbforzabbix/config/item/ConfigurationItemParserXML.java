@@ -1,4 +1,4 @@
-package com.smartmarmot.dbforbix.config.item;
+package com.scotttiger.dbforzabbix.config.item;
 
 import java.security.InvalidParameterException;
 import java.util.Collection;
@@ -11,9 +11,9 @@ import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
-import com.smartmarmot.common.utils.SAXParserDBforBIX;
-import com.smartmarmot.dbforbix.config.element.ConfigurationElementFactory;
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
+import com.scotttiger.common.utils.SAXParserDBforBIX;
+import com.scotttiger.dbforzabbix.config.element.ConfigurationElementFactory;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
 
 public class ConfigurationItemParserXML implements IConfigurationItemParser {
 	
@@ -94,7 +94,8 @@ public class ConfigurationItemParserXML implements IConfigurationItemParser {
 		String type=xmlConfigurationElement.attributeValue("type","column");
 		String query=xmlConfigurationElement.getTextTrim();
 		
-		IConfigurationElement configurationElement=ConfigurationElementFactory.buildConfigurationElement(
+		IConfigurationElement configurationElement =
+            ConfigurationElementFactory.buildConfigurationElement(
 				configurationElementType, prefix, time, item_or_items, names, noData, type, query
 				);
 		return configurationElement;

@@ -1,10 +1,10 @@
-package com.smartmarmot.dbforbix.config.item;
+package com.scotttiger.dbforzabbix.config.item;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
 
 public class ConfigurationItem implements IConfigurationItem {
 

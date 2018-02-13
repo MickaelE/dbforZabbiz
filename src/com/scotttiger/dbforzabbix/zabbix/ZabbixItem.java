@@ -15,11 +15,11 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix;
+package com.scotttiger.dbforzabbix.zabbix;
 
 import java.io.Serializable;
 
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
 
 public final class ZabbixItem implements Serializable {
 

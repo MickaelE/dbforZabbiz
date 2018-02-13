@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.zabbix;
+package com.scotttiger.dbforzabbix.zabbix;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,12 +27,12 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.common.PersistentDB;
-import com.smartmarmot.common.StackSingletonPersistent;
-import com.smartmarmot.dbforbix.config.Config;
-import com.smartmarmot.dbforbix.config.ZabbixServer;
-import com.smartmarmot.dbforbix.zabbix.protocol.Sender32;
-import com.smartmarmot.dbforbix.zabbix.protocol.ISenderProtocol;
+import com.scotttiger.common.PersistentDB;
+import com.scotttiger.common.StackSingletonPersistent;
+import com.scotttiger.dbforzabbix.config.Config;
+import com.scotttiger.dbforzabbix.config.ZabbixServer;
+import com.scotttiger.dbforzabbix.zabbix.protocol.Sender32;
+import com.scotttiger.dbforzabbix.zabbix.protocol.ISenderProtocol;
 
 /**
  * Sender query handler
@@ -128,10 +128,12 @@ public class ZabbixSender extends Thread {
 						catch (Exception ex) {
 							LOG.error("ZabbixSender: Error contacting Zabbix server " + zs.getZServerHost() + " - " + ex.getMessage());
 							if (persistent){
-								LOG.debug("ZabbixSender: Current PeristentStack size ="+StackSingletonPersistent.getInstance().size());
+								LOG.debug("ZabbixSender: Current PeristentStack size =" +
+                                          StackSingletonPersistent.getInstance().size());
 								LOG.info("ZabbixSender - Adding to the persisent stack items: "+zItems);
-								PersistentDB.getInstance().add(zItems);
-								LOG.debug("ZabbixSender - Current PersistentDB size ="+PersistentDB.getInstance().size());	
+                                PersistentDB.getInstance().add(zItems);
+								LOG.debug("ZabbixSender - Current PersistentDB size =" +
+                                          PersistentDB.getInstance().size());	
 							}
 						}
 						finally{

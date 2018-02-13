@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.1" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.smartmarmot.dbforbix.config.element.DiscoveryConfigurationElement" 
+  <class id="1" language="java" name="com.scotttiger.dbforzabbix.config.element.DiscoveryConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/DiscoveryConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="313" x="983" y="787"/>    
@@ -11,7 +11,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="com.smartmarmot.dbforbix.config.element.IConfigurationElement" 
+  <interface id="2" language="java" name="com.scotttiger.dbforzabbix.config.element.IConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/IConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1570" y="-3"/>    
@@ -21,7 +21,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="com.smartmarmot.dbforbix.config.element.AbstractConfigurationElement" 
+  <class id="3" language="java" name="com.scotttiger.dbforzabbix.config.element.AbstractConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/AbstractConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1566" y="477"/>    
@@ -31,7 +31,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.smartmarmot.dbforbix.config.element.AbstractMultiConfigurationElement" 
+  <class id="4" language="java" name="com.scotttiger.dbforzabbix.config.element.AbstractMultiConfigurationElement" 
     project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/AbstractMultiConfigurationElement.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -42,7 +42,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.smartmarmot.dbforbix.config.element.SimpleConfigurationElement" 
+  <class id="5" language="java" name="com.scotttiger.dbforzabbix.config.element.SimpleConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/SimpleConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1567" y="861"/>    
@@ -52,7 +52,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.smartmarmot.dbforbix.config.element.MultiColumnConfigurationElement" 
+  <class id="6" language="java" name="com.scotttiger.dbforzabbix.config.element.MultiColumnConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/MultiColumnConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1955" y="1096"/>    
@@ -62,7 +62,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.smartmarmot.dbforbix.config.element.MultiRowConfigurationElement" 
+  <class id="7" language="java" name="com.scotttiger.dbforzabbix.config.element.MultiRowConfigurationElement" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/element/MultiRowConfigurationElement.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2311" y="1098"/>    
@@ -72,7 +72,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.smartmarmot.dbforbix.scheduler.Scheduler" project="DBforBix" 
+  <class id="8" language="java" name="com.scotttiger.dbforzabbix.scheduler.Scheduler" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/scheduler/Scheduler.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2120" y="-12"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -81,7 +81,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.smartmarmot.dbforbix.config.item.ConfigurationItem" project="DBforBix" 
+  <class id="9" language="java" name="com.scotttiger.dbforzabbix.config.item.ConfigurationItem" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/item/ConfigurationItem.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="355" y="128"/>    
@@ -91,7 +91,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="com.smartmarmot.dbforbix.config.item.IConfigurationItem" project="DBforBix" 
+  <interface id="10" language="java" name="com.scotttiger.dbforzabbix.config.item.IConfigurationItem" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/item/IConfigurationItem.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="902" y="476"/>    
@@ -101,7 +101,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="11" language="java" name="com.smartmarmot.dbforbix.config.Config.ZBXBadResponseException" 
+  <class id="11" language="java" name="com.scotttiger.dbforzabbix.config.Configig.ZBXBadResponseException" 
     project="DBforBix" file="/DBforBix/src/com/smartmarmot/dbforbix/config/Config.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1246" y="2032"/>    
@@ -111,7 +111,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="12" language="java" name="com.smartmarmot.dbforbix.config.Config.Validable" project="DBforBix" 
+  <interface id="12" language="java" name="com.scotttiger.dbforzabbix.config.Configig.Validable" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/Config.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="749" y="1028"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -120,7 +120,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="13" language="java" name="com.smartmarmot.dbforbix.config.ZabbixServer" project="DBforBix" 
+  <class id="13" language="java" name="com.scotttiger.dbforzabbix.config.ZabbixServer" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/ZabbixServer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="340" y="1224"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -129,7 +129,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="com.smartmarmot.dbforbix.config.Database" project="DBforBix" 
+  <class id="14" language="java" name="com.scotttiger.dbforzabbix.config.Database" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/Database.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1260" y="1468"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -138,7 +138,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="com.smartmarmot.dbforbix.config.Config" project="DBforBix" 
+  <class id="15" language="java" name="com.scotttiger.dbforzabbix.config.Config" project="DBforBix" 
     file="/DBforBix/src/com/smartmarmot/dbforbix/config/Config.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="811" y="2035"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -1,10 +1,10 @@
-package com.smartmarmot.dbforbix.config.item;
+package com.scotttiger.dbforzabbix.config.item;
 
 import java.util.Set;
 
 import org.apache.commons.lang3.NotImplementedException;
 
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
 
 public class ConfigurationItemParserNative implements IConfigurationItemParser {
 

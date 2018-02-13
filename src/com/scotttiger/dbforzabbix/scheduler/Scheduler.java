@@ -15,28 +15,30 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.scheduler;
+package com.scotttiger.dbforzabbix.scheduler;
+
+import com.scotttiger.dbforzabbix.DBforZabbix;
+import com.scotttiger.dbforzabbix.config.element.IConfigurationElement;
+import com.scotttiger.dbforzabbix.db.DBManager;
+import com.scotttiger.dbforzabbix.db.DBType;
+import com.scotttiger.dbforzabbix.db.adapter.DBAdapter;
+import com.scotttiger.dbforzabbix.db.adapter.DBAdapter.DBNotDefinedException;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixSender;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TimerTask;
-import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.DBforBix;
-import com.smartmarmot.dbforbix.config.element.IConfigurationElement;
-import com.smartmarmot.dbforbix.db.DBManager;
-import com.smartmarmot.dbforbix.db.DBType;
-import com.smartmarmot.dbforbix.db.adapter.DBAdapter;
-import com.smartmarmot.dbforbix.db.adapter.DBAdapter.DBNotDefinedException;
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
-import com.smartmarmot.dbforbix.zabbix.ZabbixSender;
+import org.apache.log4j.Logger;
 
 /**
  * The item fetching class
- * 
+ *
  * @author Andrea Dalle Vacche
  */
 public class Scheduler extends TimerTask {
@@ -73,7 +75,7 @@ public class Scheduler extends TimerTask {
 			return;
 		working = true;
 		DBManager dbManager = DBManager.getInstance();
-		ZabbixSender zabbixSender = DBforBix.getZabbixSender();
+		ZabbixSender zabbixSender = DBforZabbix.getZabbixSender();
 		try {
 			LOG.debug("Scheduler.run() " + getPause());
 			// <configurationUID>:<ConfigurationItem>
@@ -102,7 +104,7 @@ public class Scheduler extends TimerTask {
 										new ZabbixItem(
 												configurationElement.getElementID(),
 												"Could not fetch value of [" + configurationElement.getElementID() +"] for db "+ db.getName()+":\n"+sqlex.getLocalizedMessage(),
-												ZabbixItem.ZBX_STATE_NOTSUPPORTED,
+                                                                    ZabbixItem.ZBX_STATE_NOTSUPPORTED,
 												new Long(System.currentTimeMillis() / 1000L),
 												configurationElement
 												)
@@ -119,7 +121,7 @@ public class Scheduler extends TimerTask {
 									new ZabbixItem(
 											configurationElement.getElementID(),
 											"Could not connect to DB " + db.getName()+":\n"+sqlex.getLocalizedMessage(),
-											ZabbixItem.ZBX_STATE_NOTSUPPORTED,
+                                                                ZabbixItem.ZBX_STATE_NOTSUPPORTED,
 											new Long(System.currentTimeMillis() / 1000L),
 											configurationElement
 											)
@@ -131,7 +133,7 @@ public class Scheduler extends TimerTask {
 									new ZabbixItem(
 											configurationElement.getElementID(),
 											nodbex.getLocalizedMessage(),
-											ZabbixItem.ZBX_STATE_NOTSUPPORTED,
+                                                                ZabbixItem.ZBX_STATE_NOTSUPPORTED,
 											new Long(System.currentTimeMillis() / 1000L),
 											configurationElement
 											)

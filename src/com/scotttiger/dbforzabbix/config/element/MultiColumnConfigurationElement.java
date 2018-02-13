@@ -15,7 +15,7 @@
  * DBforBix. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.smartmarmot.dbforbix.config.element;
+package com.scotttiger.dbforzabbix.config.element;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 
-import com.smartmarmot.dbforbix.zabbix.ZabbixItem;
+import com.scotttiger.dbforzabbix.zabbix.ZabbixItem;
 
 
 public class MultiColumnConfigurationElement extends AbstractMultiConfigurationElement {
@@ -73,8 +73,7 @@ public class MultiColumnConfigurationElement extends AbstractMultiConfigurationE
 								realName = realName.replace("%"+i, (null != rs.getString(i)) ? rs.getString(i) : getNoData() );
 							//get value
 							values.add(new ZabbixItem(getPrefix()+realName,
-									(null != rs.getString(column)) ? rs.getString(column) : getNoData(),
-									ZabbixItem.ZBX_STATE_NORMAL,clock, this));
+									(null != rs.getString(column)) ? rs.getString(column) : getNoData(), ZabbixItem.ZBX_STATE_NORMAL,clock, this));
 						}
 					}
 				}

@@ -1,8 +1,8 @@
-package com.smartmarmot.dbforbix.db.adapter;
+package com.scotttiger.dbforzabbix.db.adapter;
 
 import java.util.Set;
 
-import com.smartmarmot.dbforbix.db.DBType;
+import com.scotttiger.dbforzabbix.db.DBType;
 
 
 public class SYBASE extends AbstractDBAdapter {
